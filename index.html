@@ -1,0 +1,64 @@
+<html>
+<head>
+	<h2>  MENU  </h2>
+	<script src="page.js"></script>
+</head>
+<body>
+	
+<nav>
+	
+		<ul>
+			<title>Menu</title>
+	<li><a href="page.html?usuario=Allison_Cruz" target="_blank">Nombre</a></li>
+	<li><a href="page.html?usuario=Ing_Computacion" target="_blank">Carrera</a></li>
+	<li><a href="page.html?usuario=Programacion_Grafica" target="_blank">Materia</a></li>
+	<li><a href="page.html?usuario=8888-8888" target="_blank">Telefono</a></li>
+	</ul>
+</nav>	
+
+
+<p></p>
+
+<script >
+page('/', index)
+page('/Carrera', Empresa)
+page('/Materia', Acerca)
+page('/cel', cel)
+page('/cel/:ext', celext)
+
+function index(){|
+	document.querySelector('p')
+	.textContent = 'Allison_Cruz'
+
+}
+
+
+function Empresa(){
+	document.querySelector('p')
+	.textContent = 'Ing_Computacion'
+}
+
+
+function Acerca(){
+	document.querySelector('p')
+	.textContent = 'Programacion_Grafica'
+}
+
+function cel()
+{
+	document.querySelector('p')
+	.textContent = " CEl: 8888-8888"
+}
+function celext(ctx)
+{
+	document.querySelector('p')
+	.textContent = " CEl: 8888-8888 ext:" + (ctx.params.ext) || ""
+}
+
+</script>
+</body>
+
+</html>
+
+
+
